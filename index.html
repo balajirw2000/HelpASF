@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>FILES</title>
+    <style>
+      body {
+        overflow-x: hidden;
+        background: #dbf9f4;
+      }
+      .card {
+        background-color: #000000;
+        border-radius: 10px;
+        margin-top: 5%;
+        padding-top: 10px;
+
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
+          0 40px 20px 0px rgba(0, 0, 0, 0.19);
+        margin-left: 30%;
+      }
+
+      .card-text {
+        color: white;
+        font-size: 25px;
+      }
+
+      .card-title {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .btn {
+        background-color: #ffffff;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: center;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 0px;
+      }
+      .header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      #bt {
+        margin-left: 20px;
+      }
+      #def {
+        margin-left: 20px;
+      }
+      .card {
+        background-color: #1b4965;
+        width: 90%;
+        margin-left: 6%;
+      }
+      #big-img {
+        border-radius: 4px;
+        padding: 5px;
+        width: 400px;
+      }
+      .column-md-6-1 {
+        width: 50%;
+        float: left;
+        padding: 15px 25px 25px 20px;
+      }
+      .column-md-6-2 {
+        width: 50%;
+        float: left;
+        padding: 15px 65px 25px 20px;
+      }
+      .col-md-1-2 {
+        margin-top: 20px;
+      }
+      .col-md-1-2-3 {
+        margin-top: 40px;
+      }
+      .screenshots {
+        height: 400px;
+      }
+      .card-text:last-child {
+        margin-bottom: 0;
+        margin-right: 35px;
+      }
+      .carousel-control-next {
+        right: -45px;
+      }
+      .carousel-indicators {
+        position: relative;
+        bottom: -10px;
+      }
+
+      /*-----RESPONSIVE-----*/
+      @media (max-width: 1024px) {
+        .card {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .column-md-6-1 {
+          width: 100%;
+          float: none;
+          /* padding: 15px 25px 25px 20px; */
+        }
+        .column-md-6-2 {
+          width: 100%;
+          float: none;
+          /* padding: 15px 65px 25px 20px; */
+        }
+        .card {
+          width: 95%;
+          margin-left: 10px;
+        }
+        .carousel-control-next {
+          right: 0px;
+        }
+      }
+
+      @media(max-width: 375px) {
+        .column-md-6-2 {
+          padding: 15px 36px 25px 20px;
+        }
+      }
+
+      @media(max-width: 320px) {
+        .card-text:last-child {
+          font-size: 20px;
+        }
+      }
+
+      /*-----RESPONSIVE-----*/
+    </style>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+  </head>
+  <body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <div class="container">
+      <div class="row">
+        <div class="card mb-3" style="max-width: 1500px">
+          <div class="row g-0">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100 screenshots"
+                      src="login1.png"
+                      alt="First slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Login</h2>
+                    <p class="card-text">
+                      1. You can use your email address or your phone number to
+                      log in.
+                      <input
+                        id="step1"
+                        value="लॉग इन करने के लिए आप अपने ईमेल पते या अपने फोन नंबर का उपयोग कर सकते हैं।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step1').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i>
+                      <br />
+                      2. Enter your email address and password to log in using
+                      email.
+                      <input
+                        id="step2"
+                        value="ईमेल का उपयोग करके लॉग इन करने के लिए अपना ईमेल पता और पासवर्ड दर्ज करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step2').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100 screenshots"
+                      src="login2.png"
+                      alt="Second slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Login</h2>
+                    <p class="card-text">
+                      3. To log in with your phone number, first click the
+                      "Login using Phone Number" button, then input your phone
+                      number and password.
+                      <input
+                        id="step3"
+                        value="अपने फ़ोन नंबर से लॉग इन करने के लिए, पहले फ़ोन नंबर का उपयोग करके लॉगिन करें बटन पर क्लिक करें, फिर अपना फ़ोन नंबर और पासवर्ड दर्ज करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step3').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      4. To log in, click the Login button.
+                      <input
+                        id="step4"
+                        value="लॉग इन करने के लिए, लॉगिन बटन पर क्लिक करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step4').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100 screenshots"
+                      src="login3.png"
+                      alt="Second slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Login</h2>
+                    <p class="card-text">
+                      5. If you've forgotten your password, click "Forgot
+                      Password".
+                      <input
+                        id="step5"
+                        value="यदि आप अपना पासवर्ड भूल गए हैं, तो पासवर्ड भूल गए पर क्लिक करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step5').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      6. You'll be prompted to enter your email address.
+                      <input
+                        id="step6"
+                        value="आपको अपना ईमेल पता दर्ज करने के लिए प्रेरित किया जाएगा।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step6').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      7. When you click the Reset button, you'll receive an
+                      email with a link to create a new password.
+                      <input
+                        id="step7"
+                        value="जब आप रीसेट बटन पर क्लिक करते हैं, तो आपको एक नया पासवर्ड बनाने के लिए एक लिंक के साथ एक ईमेल प्राप्त होगा।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step7').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+              <div class="col-md-1-2">
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="2"
+                  ></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-1-2">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="card mb-3" style="max-width: 1500px">
+          <div class="row g-0">
+            <div
+              id="carouselExampleIndicators2"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100"
+                      src="signup1.png"
+                      alt="First slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Sign up</h2>
+                    <p class="card-text">
+                      There are four sections to the signup procedure.
+                      <input
+                        id="step8"
+                        value="साइनअप प्रक्रिया के चार खंड हैं।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step8').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+
+                      1. To begin, fill in your basic information.
+                      <input
+                        id="step9"
+                        value="शुरू करने के लिए, अपनी बुनियादी जानकारी भरें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step9').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+
+                      2. In the usertype, you’re supposed to choose the “USER”
+                      option.
+                      <input
+                        id="step10"
+                        value="उपयोगकर्ता प्रकार में, आपको उपयोगकर्ता विकल्प चुनना होगा।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step10').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+
+                      3. Click the “NEXT” button once you’ve filled out all the
+                      fields.
+                      <input
+                        id="step11"
+                        value="सभी फ़ील्ड भरने के बाद अगला बटन पर क्लिक करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step11').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+
+                      <strong>NOTE:</strong> You will only be able to register
+                      if you are over the age of 65.
+                      <input
+                        id="step12"
+                        value="नोट: आप केवल तभी पंजीकरण कर पाएंगे जब आप 65 वर्ष से अधिक आयु के हों।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step12').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100"
+                      src="signup2.png"
+                      alt="Second slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Sign up</h2>
+                    <p class="card-text">
+                      4. In the address section, you must include your address.
+                      <input
+                        id="step13"
+                        value="पता अनुभाग में, आपको अपना पता शामिल करना होगा।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step13').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      5. To get the closest address, reposition the marker on
+                      the map accordingly.
+                      <input
+                        id="step14"
+                        value="निकटतम पता प्राप्त करने के लिए, मानचित्र पर मार्कर को तदनुसार बदलें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step14').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+
+                      6. Before pressing the "NEXT" button, double-check the
+                      address.
+                      <input
+                        id="step15"
+                        value="अगला बटन दबाने से पहले, पते की दोबारा जांच करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step15').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100"
+                      src="signup3.png"
+                      alt="Second slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Sign up</h2>
+                    <p class="card-text">
+                      7. You may only continue if you agree to the terms and
+                      conditions.
+                      <input
+                        id="step16"
+                        value="आप तभी जारी रख सकते हैं जब आप नियम और शर्तों से सहमत हों।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step16').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      8. Please read the terms and conditions carefully before
+                      agreeing to them.
+                      <input
+                        id="step17"
+                        value="कृपया उनसे सहमत होने से पहले नियम और शर्तों को ध्यान से पढ़ें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step17').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="column-md-6-1">
+                    <img
+                      class="d-block w-100"
+                      src="signup4.png"
+                      alt="Second slide"
+                    />
+                  </div>
+                  <div class="column-md-6-2">
+                    <h2 class="card-title">Sign up</h2>
+                    <p class="card-text">
+                      9. Here, fill in the phone number you want to use to
+                      register.
+                      <input
+                        id="step18"
+                        value="यहां, उस फ़ोन नंबर को भरें जिसे आप रजिस्टर करने के लिए उपयोग करना चाहते हैं।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step18').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      10. The otp will be sent to the phone number you’ve
+                      provided.
+                      <input
+                        id="step19"
+                        value="आपके द्वारा दिए गए फोन नंबर पर ओटीपी भेजा जाएगा।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step19').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                      11. Confirm the otp to complete the Sign-up process.
+                      <input
+                        id="step20"
+                        value="साइन-अप प्रक्रिया को पूरा करने के लिए ओटीपी की पुष्टि करें।"
+                        hidden
+                      />
+                      <i
+                        class="fa fa-volume-up"
+                        style="color: white"
+                        onClick="responsiveVoice.speak(document.getElementById('step20').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                      ></i
+                      ><br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators2"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators2"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+              <div class="col-md-1-2">
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselExampleIndicators2"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators2"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators2"
+                    data-slide-to="2"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators2"
+                    data-slide-to="3"
+                  ></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-1-2">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators2"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators2"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators2"
+                data-slide-to="2"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators2"
+                data-slide-to="3"
+              ></li>
+            </ol>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="card mb-3" style="max-width: 1500px">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="schedule.png"
+                alt="..."
+                id="big-img"
+                class="d-block w-100 screenshots"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h2 class="card-title">Schedule Meeting</h2>
+                <p class="card-text"></p>
+                <div
+                  id="carouselExampleIndicators3"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <p class="card-text">
+                        1. To schedule a meeting, start by selecting the type of
+                        user you want to meet with: Volunteer or Elder.
+                        <input id="step21" value="
+                          >मीटिंग शेड्यूल करने के लिए, उस उपयोगकर्ता के प्रकार
+                          का चयन करके प्रारंभ करें जिससे आप मिलना चाहते हैं:
+                          स्वयंसेवी या बुजुर्ग।" hidden>
+                        </input>
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step21').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i
+                        ><br />
+                        2. Depending on the option you choose, you'll be shown
+                        with a list of nearby users.
+                        <input id="step22" value="
+                          आपके द्वारा चुने गए विकल्प के आधार पर, आपको आस-पास के
+                          उपयोगकर्ताओं की सूची के साथ दिखाया जाएगा।" hidden>
+                        </input>
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step22').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i
+                        ><br />
+                      </p>
+                    </div>
+                    <div class="carousel-item">
+                      <p class="card-text">
+                        3. Choose the time and date of the meeting. Also, give a
+                        brief reason for the meeting.
+                        <input id="step23" value="
+                          बैठक का समय और तारीख चुनें। साथ ही बैठक का संक्षिप्त
+                          कारण भी बताएं।" hidden></input
+                        >
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step23').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i>
+                      </p>
+                    </div>
+                    <div class="carousel-item">
+                      <p class="card-text">
+                        <strong>NOTE:</strong> When you schedule a meeting with
+                        a volunteer, they will be notified, and the event will
+                        appear in the “Unconfirmed Events” section. Only if the
+                        volunteer is available at the provided time will the
+                        meet be confirmed, and you will be able to view the
+                        event in the “Confirmed Events” tab.
+                        <input id="step24" value="
+                          नोट: जब आप किसी स्वयंसेवक के साथ मीटिंग शेड्यूल करते
+                          हैं, तो उन्हें सूचित किया जाएगा, और ईवेंट अपुष्ट
+                          ईवेंट अनुभाग में दिखाई देगा। केवल अगर स्वयंसेवक दिए
+                          गए समय पर उपलब्ध है, तो बैठक की पुष्टि की जाएगी, और आप
+                          पुष्टि की गई घटनाओं टैब में घटना को देख
+                          पाएंगे।" hidden> </input
+                        >
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step24').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i
+                        ><br />
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselExampleIndicators3"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carouselExampleIndicators3"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  <div class="col-md-1-2-3">
+                    <ol class="carousel-indicators">
+                      <li
+                        data-target="#carouselExampleIndicators3"
+                        data-slide-to="0"
+                        class="active"
+                      ></li>
+                      <li
+                        data-target="#carouselExampleIndicators3"
+                        data-slide-to="1"
+                      ></li>
+                      <li
+                        data-target="#carouselExampleIndicators3"
+                        data-slide-to="2"
+                      ></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-1-2-3">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators3"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators3"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators3"
+                data-slide-to="2"
+              ></li>
+            </ol>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="card mb-3" style="max-width: 1500px">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="events1.PNG"
+                alt="..."
+                id="big-img"
+                class="d-block w-100 screenshots"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h2 class="card-title">Events</h2>
+                <p class="card-text"></p>
+                <div
+                  id="carouselExampleIndicatorss"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <p class="card-text">
+                        1. In the events section, there are two tabs - Confirmed Events and Unconfirmed Events.
+                        <input id="step30" value="
+                        इवेंट सेक्शन में, दो टैब होते हैं - कन्फर्म इवेंट और अपुष्ट इवेंट।" hidden>
+                        </input>
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step30').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i
+                        ><br />
+                        2. The Unconfirmed Events tab will display all the events that have been scheduled with the volunteer but have not yet been confirmed. 
+                        <input id="step25" value="
+                        अपुष्ट ईवेंट टैब उन सभी ईवेंट को प्रदर्शित करेगा जो स्वयंसेवक के साथ शेड्यूल किए गए हैं लेकिन अभी तक पुष्टि नहीं की गई है।" hidden>
+                        </input>
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step25').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i
+                        ><br />
+                        3. The Confirmed Events tab will display all of the confirmed events.
+                        <input id="step26" value="
+                        कन्फर्म्ड इवेंट्स टैब सभी कन्फर्म्ड इवेंट्स को प्रदर्शित करेगा।" hidden></input
+                        >
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step26').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i>
+                        <br>
+                      </p>
+                    </div>
+                    <div class="carousel-item">
+                      <p class="card-text">
+                        4. After the agreed-upon meeting time, a "Did y'all meet:" section will be provided for the meetings with the Volunteers.
+                        <input id="step27" value="
+                        सहमत बैठक के समय के बाद, स्वयंसेवकों के साथ बैठकों के लिए क्या आप सभी मिले: अनुभाग प्रदान किया जाएगा।" hidden></input
+                        >
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step27').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i>
+                        <br>
+                        5. If the meeting took place, press the ✔ button.
+                        <input id="step28" value="
+                        अगर बैठक हुई, तो ✔ बटन दबाएं।" hidden></input
+                        >
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step28').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i>
+                        <br>
+                        6. Click the ✗ button if the meeting didn't take place.
+                        <input id="step29" value="
+                        अगर मीटिंग नहीं हुई तो ✗ बटन पर क्लिक करें।" hidden></input
+                        >
+                        <i
+                          class="fa fa-volume-up"
+                          style="color: white"
+                          onClick="responsiveVoice.speak(document.getElementById('step29').value,'Hindi Female',{rate:0.80},{pitch: 2});"
+                        ></i>
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselExampleIndicatorss"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carouselExampleIndicatorss"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  <div class="col-md-1-2-3">
+                    <ol class="carousel-indicators">
+                      <li
+                        data-target="#carouselExampleIndicatorss"
+                        data-slide-to="0"
+                        class="active"
+                      ></li>
+                      <li
+                        data-target="#carouselExampleIndicatorss"
+                        data-slide-to="1"
+                      ></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-1-2-3">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicatorss"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicatorss"
+                data-slide-to="1"
+              ></li>
+            </ol>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
